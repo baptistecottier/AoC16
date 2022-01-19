@@ -15,8 +15,7 @@ print('There is', count, 'possibles triangles')
 count , i = 0 ,0
 lengths=list(map(int,re.findall('[0-9]+', triangles))) # Extract and convert the int
 while i+6 < len(lengths):
-    sides=[lengths[i], lengths[i+3] , lengths[i+6]] # Retrieve the group
-    sides.sort() # Sort in ascending order
+    sides=sorted([lengths[i], lengths[i+3] , lengths[i+6]]) # Retrieve the group and sort them
     if sides[0]+sides[1]>sides[2] : count += 1 # If the sum of the two smallest sides is lower than the greatest side, increas the count
     i+=1 
     if i % 3 == 0: i +=6 # If we are at the end of a line, the next value has ever been considered previously. The next non-considerated value is the 6th afterward
