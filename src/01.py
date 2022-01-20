@@ -1,5 +1,5 @@
 # Retrieving the input values as pairs : (turn , distance)
-with open("Day01/input") as f: 
+with open("inputs/01.txt") as f: 
     steps=[(step[0],int(step[1:])) for step in f.read().split(', ')]
 
 x , y = 0 , 0 # Starting point
