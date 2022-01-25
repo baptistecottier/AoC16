@@ -29,3 +29,5 @@ print('It seems there are', sum([sum(g) for g in screen]), 'lit pixels forming t
 for g in screen: 
     print('| '+''.join([str(item).replace('0',' ').replace('1', '█') for item in g])+'|')
 print('|'+'_'*51+'|')
+
+# leetcode

@@ -15,11 +15,6 @@ input=open('inputs/11.txt').read().splitlines()
 # Extract number of element by floor
 elements=[floor.count('microchip')+floor.count('generator') for floor in input]
 
-steps=0
-for i in range(1,4): # Floor by floor
-     steps+=2 * sum(elements[:i]) - 3 # We compute the number of steps
-
-print('After', steps , 'steps, I should be able to build my computer')
 elements[0]+=4 # Adding the 4 extra-elements in the first floor
 print('Noooo, yet another surprise. Let\'s consider those new elements.')
 print('Ok, now I need',sum(2*sum(elements[:x]) - 3 for x in range(1,4)), 'steps to build my computer')
